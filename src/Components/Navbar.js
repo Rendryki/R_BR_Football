@@ -12,7 +12,6 @@ function Navbar(){
         }}>
           <Tab> &#9917; Home</Tab>
           <Tab>Brasileirão 2023</Tab>
-          <Tab>Copa do Brasil 2023</Tab>
         </TabList>
         <TabPanels>
             <TabPanel>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CircularProgress, SimpleGrid } from '@chakra-ui/react';
+import { CircularProgress } from '@chakra-ui/react';
 import CampeonatosCards from "../Components/CampeonatosCards";
 import MensagemHome from "../Components/MensagemHome";
 
@@ -18,10 +18,8 @@ function Home(){
     {message ? 
     <>  
         <MensagemHome/>
-        <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(400px, 1fr))'>
-        <CampeonatosCards NomeCampeonato='Campeonato Brasileiro 2023' ImagemTamanho='220px' ImagemCampeonato={require('../Images/brasileirao-serie-a-removebg-preview.png')}/>
-        <CampeonatosCards NomeCampeonato='Copa do Brasil 2023' ImagemTamanho='250px' ImagemCampeonato={require('../Images/logo-copa-do-brasil-taca-1024-removebg-preview.png')}/>
-        </SimpleGrid>
+        <CampeonatosCards NomeCampeonato='Campeonato Brasileiro 2023' ImagemTamanho='220px' ImagemCampeonato={require('../Images/brasileirao-serie-a-removebg-preview.png')}  
+        CampeonatoDesc='Os 20 principais Clubes do Brasil disputando um dos principais torneios de pontos corridos do mundo. Não perca a chance de acompanhar seu time favorito em busca do titulo de Campeão Brasileiro!'/>
     </>
     : <CircularProgress isIndeterminate size='60px' color='green.300' margin='100px 0px'/>}</div>
    )

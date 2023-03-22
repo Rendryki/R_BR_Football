@@ -1,6 +1,6 @@
-import TabelaCampeonatoBr from "../Components/TabelaCampeonatoBr";
+import BrSubNavbar from "../Components/BrSubNavbar";
 
 function Brasileiro(){
-    return <TabelaCampeonatoBr/>
+    return <BrSubNavbar />
 }
 export default Brasileiro;

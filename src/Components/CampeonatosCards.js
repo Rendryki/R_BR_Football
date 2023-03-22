@@ -1,8 +1,7 @@
-import { Heading, Card, CardHeader, CardBody, CardFooter, Button} from '@chakra-ui/react';
+import { Heading, Card, CardHeader, CardBody, CardFooter, Text} from '@chakra-ui/react';
 import { Image } from '@chakra-ui/react';
 
-function CampeonatosCards({NomeCampeonato, ImagemCampeonato, ImagemTamanho}){
-         
+function CampeonatosCards({NomeCampeonato, ImagemCampeonato, CampeonatoDesc, ImagemTamanho}){
    return (
     <>
         <Card style={{
@@ -15,8 +14,8 @@ function CampeonatosCards({NomeCampeonato, ImagemCampeonato, ImagemTamanho}){
             <CardBody>
                 <Image src={ImagemCampeonato} margin="auto" width={ImagemTamanho} alt={NomeCampeonato} />
             </CardBody>
-            <CardFooter>
-                <Button colorScheme='green' width='100%'>Acompanhe de perto!</Button>
+            <CardFooter>                  
+                <Text fontSize='xl'>{CampeonatoDesc}</Text>
             </CardFooter>
         </Card>
     </>
