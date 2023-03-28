@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# **BRFOOTBALL** ⚽
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Single Page Application developed in React!
 
-## Available Scripts
+## How does it works?
 
-In the project directory, you can run:
+The main goal for this application was to deliver some informations of the brazilian main football/soccer national competition, the 'Campeonato Brasileiro', also know as 'Brasileirão'. 
+Basically, it delivers to the user the actual table of the competition, all the 38 rounds of the 20 teams and the championship artillery. 
+The championship table includes the position of each team, the points, games played, wins, draws, losses, goals scored, goals suffered and goals difference.
+The rounds table delivers to the user the 38 rounds with 10 matches each, giving the basic information of each match, like which team is going to face which, and if the match already finished, the final score.
+The artillery list show the players with most goals scored in the championship.
 
-### `npm start`
+## How was it developed? 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It was totally developed using React, but also has been contribuited by Chakra-UI. 
+The application used the React Router configurations available in Chakra-UI, splitting the SPA into two parts, the homepage with a few text information and welcome message and the 'Brasileirão' page, where all the App funcionalities lay.
+The 'Brasileirão' part is also splitted into three different section, the first one is the 'Tabela' section, where the championship table lays, the second one is the 'Rodadas' section, which show all the season matches divided in 38 rounds, and the third page shows the 'Artilharia' section, where the artillery list can be seen.
+All the data in the three sections is provided by the API 'API-Futebol', which is found through the URL: https://www.api-futebol.com.br/. The data used in this SPA is available in the free version of the API. To get more data from other competitions, is necessary to pay for the whished competition package.
+The API data was fetched in each of the three main React Components that includes the three funcionalities of the SPA. In each, the data is fetched, creating a JSON formated data stored by an Array in useState React Hook. Then, the data Array is copyed by a map() method, showing to the user the treated data with the information totally formated following the page styling.
+Also, the Chakra-UI is responsible for most of the Application stilization and for some of components imported and used.
